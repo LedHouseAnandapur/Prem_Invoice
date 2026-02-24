@@ -336,17 +336,19 @@ function inWords(n){
 }
 
 // ─── LOGO ───
+// ─── LOGO ───
 function handleLogo(e){
   const file=e.target.files[0]; if(!file) return;
   const r=new FileReader();
   r.onload=ev=>{
     logoSrc=ev.target.result;
-    const thumb=document.getElementById('ledhouselogo');
+    const thumb=document.getElementById('logoThumb');
     thumb.src=logoSrc;
     generate();
   };
   r.readAsDataURL(file);
 }
+
 
 // ─── ITEMS ───
 function addItem(desc='',hsn='',qty=1,rate=0,gst=18){
